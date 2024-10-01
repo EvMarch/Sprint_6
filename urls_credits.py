@@ -1,13 +1,18 @@
-from locators import Locators
+from locators.main_page_locators import MainPageLocators
 class Urls:
 
     BASE_URL = "https://qa-scooter.praktikum-services.ru/"
     ORDER_URL = "https://qa-scooter.praktikum-services.ru/order"
     DZEN_URL = "https://dzen.ru/?yredirect=true"
 
+class Messages:
+    MESSAGE = "Заказ оформлен"
+
 class Order:
-    Users = [["Иван", "Иванов", "Москва, ул. Ленина, 1", "88005553535", "1.10.2024"],
-             ["Анна", "Петрова", "Питер, ул. Пушкина, 10", "88001001010", "10.11.2024"]]
+    Users = [["Иван", "Иванов", "Москва, ул. Ленина, 1", "Черкизовская", "88005553535", "1.10.2024", "Оплата наличными", Messages.MESSAGE],
+             ["Анна", "Петрова", "Питер, ул. Пушкина, 10", "ВДНХ", "88001001010", "10.11.2024", "В домофон не звонить!", Messages.MESSAGE]]
+
+
 
 
 
@@ -22,21 +27,12 @@ class Answers:
     ANSWER_8 = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'
 
 class Testdata:
-    test_data = [[Locators.QUESTION_1, Locators.TEXT_1, Answers.ANSWER_1],
-                 [Locators.QUESTION_2, Locators.TEXT_2, Answers.ANSWER_2],
-                 [Locators.QUESTION_3, Locators.TEXT_3, Answers.ANSWER_3],
-                 [Locators.QUESTION_4, Locators.TEXT_4, Answers.ANSWER_4],
-                 [Locators.QUESTION_5, Locators.TEXT_5, Answers.ANSWER_5],
-                 [Locators.QUESTION_6, Locators.TEXT_6, Answers.ANSWER_6],
-                 [Locators.QUESTION_7, Locators.TEXT_7, Answers.ANSWER_7],
-                 [Locators.QUESTION_8, Locators.TEXT_8, Answers.ANSWER_8]]
+    test_data = [[MainPageLocators.QUESTION_1, MainPageLocators.TEXT_1, Answers.ANSWER_1],
+                 [MainPageLocators.QUESTION_2, MainPageLocators.TEXT_2, Answers.ANSWER_2],
+                 [MainPageLocators.QUESTION_3, MainPageLocators.TEXT_3, Answers.ANSWER_3],
+                 [MainPageLocators.QUESTION_4, MainPageLocators.TEXT_4, Answers.ANSWER_4],
+                 [MainPageLocators.QUESTION_5, MainPageLocators.TEXT_5, Answers.ANSWER_5],
+                 [MainPageLocators.QUESTION_6, MainPageLocators.TEXT_6, Answers.ANSWER_6],
+                 [MainPageLocators.QUESTION_7, MainPageLocators.TEXT_7, Answers.ANSWER_7],
+                 [MainPageLocators.QUESTION_8, MainPageLocators.TEXT_8, Answers.ANSWER_8]]
 
-class Testdata1:
-    test_data = [[Locators.QUESTION_1, Answers.ANSWER_1],
-                 [Locators.QUESTION_2, Answers.ANSWER_2],
-                 [Locators.QUESTION_3, Answers.ANSWER_3],
-                 [Locators.QUESTION_4, Answers.ANSWER_4],
-                 [Locators.QUESTION_5, Answers.ANSWER_5],
-                 [Locators.QUESTION_6, Answers.ANSWER_6],
-                 [Locators.QUESTION_7, Answers.ANSWER_7],
-                 [Locators.QUESTION_8, Answers.ANSWER_8]]
